@@ -1,0 +1,70 @@
+aside {
+  height: 100vh;
+  position: fixed;
+  width: 10%;
+  padding-top: 2rem;
+}
+aside .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.3rem;
+}
+aside .top .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+aside .top .logo svg {
+  color: var(--clr-primary-3);
+}
+aside .close {
+  display: none;
+}
+aside .close svg {
+  width: 25px;
+  height: 20px;
+}
+aside .sidebar {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+aside .sidebar a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+aside .sidebar a svg{
+    font-size: 1.2em;
+}
+aside .sidebar a:nth-child(3) {
+  display: grid;
+}
+aside .sidebar a:nth-child(3) > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+aside .sidebar a:nth-child(3) ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+aside .sidebar a:nth-child(3) ul li {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 3rem;
+}
+aside .sidebar a:last-child svg {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  font-size: 2.5em;
+  border-radius: 50%;
+}

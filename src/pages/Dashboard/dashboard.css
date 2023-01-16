@@ -1,0 +1,85 @@
+.dashboard-layout {
+  position: absolute;
+  left: 15vw;
+  width: 83%;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 1fr 100px;
+}
+.today-container {
+  margin-top: 0.8rem;
+  padding: 2.8rem 2.5rem;
+  background: var(--clr-white);
+}
+.today-container .today-head {
+  display: flex;
+  justify-content: space-between;
+}
+.today-container .today-head svg {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  font-size: 2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.today-container .main-plan {
+  margin-top: 3rem;
+}
+.today-container .main-plan .main-plan-details {
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.today-container .main-plan .main-plan-details > div {
+  border-left: 1px solid var(--clr-primary-2);
+  padding-left: 0.8rem;
+}
+
+.today-container .weekly-report .weekly-card {
+  margin-top: 2rem;
+  background: var(--linear-gradient-2);
+}
+.today-container .weekly-report .weekly-card button {
+  margin-top: 4.5rem;
+}
+.today-container .current {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+.today-container .current .in-progress {
+  background: var(--linear-gradient-1);
+  height: 150px;
+  width: 50%;
+}
+.today-container .current .completed {
+  background: var(--linear-gradient-2);
+  height: 150px;
+  width: 50%;
+}
+.monthly-goals {
+  padding: 2.8rem 2.5rem;
+}
+.monthly-goals .monthly-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.monthly-goals .monthly-head a:hover {
+  text-decoration: underline;
+}
+.monthly-goals .outlook,.monthly-goals .outlook .progress{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-layout {
+    width: 100%;
+    left: 0;
+    grid-template-columns: 1fr;
+  }
+}

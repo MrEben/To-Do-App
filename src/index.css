@@ -1,0 +1,226 @@
+:root {
+  --clr-primary-1: #dbfae4;
+  --clr-primary-2: #11a082;
+  --clr-primary-3: #34276d;
+  --clr-primary-4: #69a4a0;
+  --clr-primary-5: #62de93;
+  --clr-primary-6: #7adac9;
+  --clr-primary-7: #b3475c;
+  --clr-primary-8: #2f5c70;
+  --clr-primary-9: #74a43c;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-transparent-black: rgb(0, 0, 0, 0.2);
+  --clr-pink: rgb(238, 166, 178);
+  --clr-yellow: rgb(238, 238, 161);
+  --clr-primary-color: rgb(3, 23, 23);
+  --background: #fbf5f5;
+  --color-info-dark: #010f08;
+  --color-info-light: rgba(66, 73, 136, 0.18);
+  --transition: all 400ms ease;
+  --spacing: 0.1rem;
+  --linear-gradient-1: linear-gradient(
+    90.21deg,
+    rgb(248, 227, 231) -5.91%,
+    var(--clr-pink) 111.58%
+  );
+  --linear-gradient-2: linear-gradient(
+    90.21deg,
+    rgb(246, 246, 218) -5.91%,
+    var(--clr-yellow) 111.58%
+  );
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  --background-width-lg: 96%;
+  --container-width-md: 95%;
+  --container-width-sm: 100%;
+  --radius: 5px;
+}
+/* Dark Theme Variables */
+.dark-theme-variables {
+  --background: #181a1e;
+  --clr-white: #202528;
+  --clr-dark-shadow: rgb(14, 30, 44);
+  --clr-black: #fff;
+  --box-shadow: 0 2rem 3rem var(--clr-dark-shadow);
+  --color-info-dark: #edeffd;
+  --clr-primary-8: #dbfae4;
+  --clr-primary-3: #dbfae4;
+  --linear-gradient-1: linear-gradient(
+    90.21deg,
+    #253137 -5.91%,
+    #202528 111.58%
+  );
+  --linear-gradient-2: linear-gradient(
+    90.21deg,
+    #2a1e27 -5.91%,
+    #202528 111.58%
+  );
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  list-style: none;
+  outline: 0;
+  text-decoration: none;
+}
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-size: 0.88rem;
+  background: var(--background);
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--clr-black);
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========GENERAL classNameES======= */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 {
+  font-size: 0.8rem;
+}
+h5 {
+  font-size: 0.77rem;
+}
+
+a {
+  color: var(--clr-black);
+}
+img {
+  display: block;
+}
+small {
+  font-size: 0.76rem;
+}
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-photo img {
+  width: 100%;
+}
+.text-muted {
+  color: var(--color-info-dark);
+}
+p {
+  color: var(--clr-primary-8);
+}
+b {
+  color: var(--clr-black);
+}
+.primary {
+  color: var(--clr-primary-3);
+}
+.danger {
+  color: var(--clr-primary-7);
+}
+.success {
+  color: var(--clr-primary-6);
+}
+.warning {
+  color: var(--clr-primary-8);
+}
+.app {
+  width: var(--background-width-lg);
+  margin: 0 auto;
+  gap: 1.8rem;
+  display: grid;
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--clr-grey-1);
+  background: transparent;
+  padding: 0.65rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--clr-primary-6);
+  transition: var(--transition);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+.btn:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  border: transparent;
+}
+.card {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+.card > div,.task-card .update {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.task-card {
+  margin-top: 1.2rem;
+  padding: 1.3rem;
+  border: 1px solid var(--clr-primary-3);
+}
+.task-card .category {
+  color: var(--clr-primary-4);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.task-card .update{
+  margin-top: 1.3rem;
+}
+.progress-card{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.progress-card svg{
+  font-size: 2.7em;
+  background: var(--clr-primary-7);
+  color: var(--clr-white);
+}
