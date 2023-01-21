@@ -1,11 +1,22 @@
 import React from 'react';
-
+import Img from '../../assets/avatar3.jpg';
+import {FaUser} from 'react-icons/fa'
 const User = () => {
   return (
-    <div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae
-      consequuntur quidem explicabo repellat nihil?
-    </div>
+    <>
+      <div className="app-user">
+        <div className="user-img">
+          <img src={Img} alt="user" />
+        </div>
+        <div className="user-details">
+          <h3>Dr. Riddle</h3>
+          <h4>Scientist</h4>
+        </div>
+        <div className="schedule-event">
+          <FaUser />
+        </div>
+      </div>
+    </>
   );
 };
 

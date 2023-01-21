@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
+import { CgAdd } from 'react-icons/cg';
 import Card from '../../UI/card';
 import { AiOutlineProject } from 'react-icons/ai';
 const Today = () => {
@@ -11,7 +11,7 @@ const Today = () => {
             <h2>Today's Plan</h2>
             <h4>13th Jan,22</h4>
           </div>
-          <AiOutlineHome />
+          <CgAdd />
         </div>
         <div className="main-plan">
           <h2>Sustainable Development Goals and Health Innnovatiion</h2>

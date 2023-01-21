@@ -3,6 +3,7 @@ aside {
   position: fixed;
   width: 10%;
   padding-top: 2rem;
+  transition: var(--transition);
 }
 aside .top {
   display: flex;
@@ -21,6 +22,7 @@ aside .top .logo svg {
 }
 aside .close {
   display: none;
+  cursor: pointer;
 }
 aside .close svg {
   width: 25px;
@@ -35,9 +37,23 @@ aside .sidebar a {
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding: 0.4rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
 }
-aside .sidebar a svg{
-    font-size: 1.2em;
+.activenav {
+  background: var(--clr-pink);
+}
+
+aside .sidebar a:hover {
+  background: var(--clr-pink);
+  margin-left: 1rem;
+}
+aside .sidebar a:hover svg{
+  color: var(--clr-primary-8);
+}
+aside .sidebar a svg {
+  font-size: 1.2em;
 }
 aside .sidebar a:nth-child(3) {
   display: grid;
@@ -55,8 +71,11 @@ aside .sidebar a:nth-child(3) ul {
 }
 aside .sidebar a:nth-child(3) ul li {
   font-size: 1.2em;
-  display: flex;
+  display: none;
   align-items: center;
+}
+.displayscheduled {
+  display: flex;
 }
 aside .sidebar a:last-child {
   position: absolute;
@@ -67,4 +86,117 @@ aside .sidebar a:last-child svg {
   color: var(--clr-white);
   font-size: 2.5em;
   border-radius: 50%;
+}
+.app-user {
+  border-left: 0.5px solid var(--clr-primary-8);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  width: 8rem;
+  height: 100vh;
+}
+.app-user .user-img img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+.app-user .user-details {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.app-user .user-details h4 {
+  color: var(--clr-primary-3);
+}
+.app-user .schedule-event {
+  position: absolute;
+  bottom: 3rem;
+}
+.app-user .schedule-event svg {
+  font-size: 2em;
+}
+.right .top {
+  display: none;
+}
+.right .top .menu-btn {
+  display: none;
+}
+
+.right .top .profile {
+  display: flex;
+  gap: 0.7rem;
+  text-align: right;
+}
+@media screen and (max-width: 1024px) {
+  aside{
+    width: 10rem;
+  }
+  .app-user{
+    width: 7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  aside {
+    z-index: 999;
+    background: var(--clr-white);
+    width: 15rem;
+    padding: 1.5rem 1.2rem;
+    margin-left: -0.8rem;
+    left: -100%;
+  }
+  .activeAside {
+    left: 0;
+  }
+  aside .sidebar a:last-child {
+    bottom: 7rem;
+  }
+  aside .close {
+    display: block;
+  }
+  .app-user {
+    display: none;
+  }
+  .right {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+  .right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--clr-white);
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    margin: 0;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--color-info-light);
+  }
+  
+  /* .right .profile .info {
+    display: none;
+  } */
+  .right .top .menu-btn {
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    cursor: pointer;
+  }
+  .right .top .menu-btn svg {
+    color: var(--clr-black);
+    width: 30px;
+    height: 25px;
+  }
+  .right .top .profile{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
 }

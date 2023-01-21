@@ -18,7 +18,7 @@
 .today-container .today-head svg {
   background: var(--clr-black);
   color: var(--clr-white);
-  font-size: 2em;
+  font-size: 2.67em;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -75,8 +75,18 @@
   flex-wrap: wrap;
   gap: 2rem;
 }
-
+@media screen and (max-width: 1024px) {
+.monthly-goals,.today-container {
+  padding: 2.8rem 1.5rem;
+}
+.dashboard-layout {
+  left: 17vw;
+}
+}
 @media screen and (max-width: 768px) {
+  .today-container{
+    margin-top: 4rem;
+  }
   .dashboard-layout {
     width: 100%;
     left: 0;

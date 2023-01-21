@@ -1,12 +1,18 @@
 import React from 'react';
 import Dashboard from './pages/Dashboard/Dashboard';
 import SideBar from './pages/Navbar/SideBar';
+import TopNav from './pages/Navbar/TopNav';
+import { AppProvider } from './components/context';
+
 function App() {
   return (
-    <div className="app">
-      <SideBar />
-      <Dashboard />
-    </div>
+    <AppProvider>
+      <div className="app">
+        <SideBar />
+        <Dashboard />
+        <TopNav />
+      </div>
+    </AppProvider>
   );
 }
 

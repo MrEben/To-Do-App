@@ -1,9 +1,20 @@
 import React from 'react';
-import { AiOutlineClose, AiFillCaretDown,AiOutlineLogout,AiOutlineProject,AiOutlineSchedule } from 'react-icons/ai';
+import {
+  AiOutlineClose,
+  AiOutlineSetting,
+  AiFillCaretDown,
+  AiOutlineLogout,
+  AiOutlineProject,
+  AiOutlineSchedule,
+  AiOutlineDashboard,
+} from 'react-icons/ai';
+import { useGlobalContext } from '../../components/context';
 import './navbar.css';
 const SideBar = () => {
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+
   return (
-    <aside>
+    <aside className={isSidebarOpen ? 'activeAside' : ''}>
       <div className="top">
         <div className="logo">
           <span>e</span>
@@ -11,13 +22,13 @@ const SideBar = () => {
             Busy<span className="danger">Dev</span>
           </h2>
         </div>
-        <div className="close">
+        <div className="close" onClick={closeSidebar}>
           <AiOutlineClose />
         </div>
       </div>
       <div className="sidebar">
-        <a href="#">
-          <AiOutlineClose />
+        <a href="#" className="activenav">
+          <AiOutlineDashboard />
           <h3>Dashboard</h3>
         </a>
         <a href="#">
@@ -46,7 +57,7 @@ const SideBar = () => {
           </ul>
         </a>
         <a href="#">
-          <AiOutlineClose />
+          <AiOutlineSetting />
           <h3>Settings</h3>
         </a>
         <a href="#">
