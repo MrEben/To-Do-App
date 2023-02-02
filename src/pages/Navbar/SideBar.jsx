@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from "react";
 import {
   AiOutlineClose,
   AiOutlineSetting,
@@ -7,14 +7,15 @@ import {
   AiOutlineProject,
   AiOutlineSchedule,
   AiOutlineDashboard,
-} from 'react-icons/ai';
-import { useGlobalContext } from '../../components/context';
-import './navbar.css';
+} from "react-icons/ai";
+import { useGlobalContext } from "../../components/context";
+import { Link } from "react-router-dom";
+import "./navbar.css";
 const SideBar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
-
+  const [displayDropDown, setDisplayDropDown] = useState(false);
   return (
-    <aside className={isSidebarOpen ? 'activeAside' : ''}>
+    <aside className={isSidebarOpen ? "activeAside" : ""}>
       <div className="top">
         <div className="logo">
           <span>e</span>
@@ -27,21 +28,21 @@ const SideBar = () => {
         </div>
       </div>
       <div className="sidebar">
-        <a href="#" className="activenav">
+        <Link to="/" className="activenav">
           <AiOutlineDashboard />
           <h3>Dashboard</h3>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/add">
           <AiOutlineProject />
           <h3>Progress</h3>
-        </a>
-        <a href="#">
+        </Link>
+        <a href="#" onClick={() => setDisplayDropDown(!displayDropDown)}>
           <div>
             <AiOutlineSchedule />
             <h3>Scheduled</h3>
-            <AiFillCaretDown />
+            <AiFillCaretDown className={displayDropDown ? "rotatecaret" : ""} />
           </div>
-          <ul>
+          <ul className={displayDropDown ? "displayscheduled" : "offscheduled"}>
             <li>
               <AiOutlineClose />
               Item 1

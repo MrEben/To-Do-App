@@ -41,6 +41,7 @@ aside .sidebar a {
   border-radius: var(--radius);
   transition: var(--transition);
 }
+
 .activenav {
   background: var(--clr-pink);
 }
@@ -49,7 +50,7 @@ aside .sidebar a:hover {
   background: var(--clr-pink);
   margin-left: 1rem;
 }
-aside .sidebar a:hover svg{
+aside .sidebar a:hover svg {
   color: var(--clr-primary-8);
 }
 aside .sidebar a svg {
@@ -64,18 +65,25 @@ aside .sidebar a:nth-child(3) > div {
   align-items: center;
 }
 aside .sidebar a:nth-child(3) ul {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-aside .sidebar a:nth-child(3) ul li {
-  font-size: 1.2em;
+.rotatecaret {
+  rotate: 180deg;
+}
+.offscheduled {
   display: none;
-  align-items: center;
 }
 .displayscheduled {
   display: flex;
+}
+aside .sidebar a:nth-child(3) ul li {
+  font-size: 1.2em;
+  align-items: center;
+}
+aside .sidebar a:nth-child(3) ul li:hover{
+  text-decoration: underline;
 }
 aside .sidebar a:last-child {
   position: absolute;
@@ -119,6 +127,7 @@ aside .sidebar a:last-child svg {
 }
 .right .top {
   display: none;
+  z-index: 150;
 }
 .right .top .menu-btn {
   display: none;
@@ -130,10 +139,10 @@ aside .sidebar a:last-child svg {
   text-align: right;
 }
 @media screen and (max-width: 1024px) {
-  aside{
+  aside {
     width: 10rem;
   }
-  .app-user{
+  .app-user {
     width: 7rem;
   }
 }
@@ -178,10 +187,7 @@ aside .sidebar a:last-child svg {
     z-index: 2;
     box-shadow: 0 1rem 1rem var(--color-info-light);
   }
-  
-  /* .right .profile .info {
-    display: none;
-  } */
+
   .right .top .menu-btn {
     display: inline-block;
     position: absolute;
@@ -193,7 +199,7 @@ aside .sidebar a:last-child svg {
     width: 30px;
     height: 25px;
   }
-  .right .top .profile{
+  .right .top .profile {
     position: absolute;
     right: 1rem;
     display: flex;

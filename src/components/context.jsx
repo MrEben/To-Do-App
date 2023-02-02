@@ -9,13 +9,22 @@ const AppProvider = ({ children }) => {
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
-
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <AppContext.Provider
       value={{
         isSidebarOpen,
         openSidebar,
         closeSidebar,
+        isModalOpen,
+        openModal,
+        closeModal
       }}
     >
       {children}

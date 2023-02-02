@@ -1,8 +1,9 @@
-import React from 'react';
-import TaskCard from '../../UI/taskCard';
-import Progress from '../../UI/progressCard';
-import { FaAirbnb } from 'react-icons/fa';
-import { AiOutlineHome } from 'react-icons/ai';
+import React from "react";
+import TaskCard from "../../UI/taskCard";
+import Progress from "../../UI/progressCard";
+import { SiCheckmarx } from "react-icons/si";
+import { MdOutlineWatchLater, MdOutlineFeedback } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
 
 const Monthly = () => {
   return (
@@ -15,25 +16,32 @@ const Monthly = () => {
         <div className="tasks">
           <TaskCard
             category={`Next gen immuno`}
-            time={'5d'}
-            task={'Multispecific liquid analysis'}
-            icon={<FaAirbnb />}
+            time={"5d"}
+            task={"Multispecific liquid analysis"}
+            icon={<MdOutlineFeedback />}
             reminder="New Feedback"
           />
           <TaskCard
+            category={`Category here`}
+            time={"time"}
+            task="What task do you want to perform?"
+            icon={<MdOutlineWatchLater />}
+            reminder="reminder"
+          />
+          {/* <TaskCard
             category={`Harmony`}
             time={'3d'}
             task={'Protein characteristics during childbirth and pregnancy'}
-            icon={<FaAirbnb />}
+            icon={<MdOutlineWatchLater />}
             reminder="Deadline is today"
           />
           <TaskCard
             category={`Pharmaceutical`}
             time={'7h'}
             task={'Quick element dissolution testing'}
-            icon={<FaAirbnb />}
+            icon={<SiCheckmarx />}
             reminder="Accepted"
-          />
+          /> */}
         </div>
         <div className="outlook">
           <div className="outlook-heading">

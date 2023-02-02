@@ -1,8 +1,11 @@
-import React from 'react';
-import { CgAdd } from 'react-icons/cg';
-import Card from '../../UI/card';
-import { AiOutlineProject } from 'react-icons/ai';
+import React from "react";
+import { CgAdd } from "react-icons/cg";
+import { IoMdAdd } from "react-icons/io";
+import Card from "../../UI/card";
+import { AiOutlineProject } from "react-icons/ai";
+import { useGlobalContext } from "../../components/context";
 const Today = () => {
+  const { openModal } = useGlobalContext();
   return (
     <>
       <div className="today-container">
@@ -11,14 +14,15 @@ const Today = () => {
             <h2>Today's Plan</h2>
             <h4>13th Jan,22</h4>
           </div>
-          <CgAdd />
+          <IoMdAdd onClick={openModal} />
         </div>
         <div className="main-plan">
-          <h2>Sustainable Development Goals and Health Innnovatiion</h2>
+          {/* <h2>Sustainable Development Goals and Health Innnovatiion</h2> */}
+          <h2>What are you plannng to do today?</h2>
           <div className="main-plan-details">
-            <h2>alpha hour</h2>
+            <h2>Categorize</h2>
             <div>
-              <h3>medi team meeting</h3>
+              <h3>Time of activity</h3>
               <h4>13:00 - 14:00</h4>
             </div>
           </div>
