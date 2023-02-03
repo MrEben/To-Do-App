@@ -23,9 +23,10 @@
   cursor: pointer;
 }
 .today-container .main-plan {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 .today-container .main-plan .main-plan-details {
+  color: var(--clr-gray);
   margin-top: 1.7rem;
   display: flex;
   justify-content: space-between;

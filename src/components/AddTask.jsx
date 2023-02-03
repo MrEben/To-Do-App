@@ -1,9 +1,19 @@
-import React from "react";
-import { FaAccessibleIcon } from "react-icons/fa";
-import { GrClose } from "react-icons/gr";
+import { useState } from "react";
+import { GrClose, GrSchedule } from "react-icons/gr";
+import { BsAlarm } from "react-icons/bs";
+import { AiOutlineUnorderedList, AiOutlineTag } from "react-icons/ai";
 import { useGlobalContext } from "./context";
 const AddTask = () => {
-  const { closeModal } = useGlobalContext();
+  const { closeModal, noteText, setNoteText } = useGlobalContext();
+  const characterLimit = 30;
+  const handleChange = (e) => {
+    if (characterLimit - e.target.value.length >= 0) {
+      setNoteText(e.target.value);
+    }
+  };
+  const handleSubmit = () => {
+    closeModal();
+  };
   return (
     <>
       <div className="task-add-modal">
@@ -16,17 +26,24 @@ const AddTask = () => {
           </div>
           <div className="add-task-input">
             <form action="">
-              <input type="text" placeholder="Enter task..." />
+              <input
+                value={noteText}
+                onChange={handleChange}
+                type="text"
+                placeholder="Enter task..."
+              />
               <button className="btn">Schedule</button>
             </form>
           </div>
           <div className="add-task-footer">
-            <button className="submit-task btn">add task</button>
+            <button onClick={handleSubmit} className="submit-task btn">
+              add task
+            </button>
             <div className="add-task-details">
-              <FaAccessibleIcon />
-              <FaAccessibleIcon />
-              <FaAccessibleIcon />
-              <FaAccessibleIcon />
+              <AiOutlineUnorderedList />
+              <AiOutlineTag />
+              <BsAlarm />
+              <GrSchedule />
             </div>
           </div>
         </div>

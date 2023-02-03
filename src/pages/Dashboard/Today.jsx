@@ -1,11 +1,10 @@
 import React from "react";
-import { CgAdd } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
 import Card from "../../UI/card";
 import { AiOutlineProject } from "react-icons/ai";
 import { useGlobalContext } from "../../components/context";
 const Today = () => {
-  const { openModal } = useGlobalContext();
+  const { openModal, noteText } = useGlobalContext();
   return (
     <>
       <div className="today-container">
@@ -18,7 +17,11 @@ const Today = () => {
         </div>
         <div className="main-plan">
           {/* <h2>Sustainable Development Goals and Health Innnovatiion</h2> */}
-          <h2>What are you plannng to do today?</h2>
+          {noteText ? (
+            <h1>{noteText}</h1>
+          ) : (
+            <h2>What are you plannng to do today?</h2>
+          )}
           <div className="main-plan-details">
             <h2>Categorize</h2>
             <div>

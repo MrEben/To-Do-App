@@ -271,7 +271,7 @@ b {
   width: 80%;
   font-size: 1.2em;
 }
-.add-task .add-task-input form input:focus{
+.add-task .add-task-input form input:focus {
   border: 1px solid var(--clr-primary-9);
 }
 .add-task .add-task-footer {
@@ -282,22 +282,23 @@ b {
 .add-task .add-task-footer button {
   background: var(--clr-primary-5);
 }
-.add-task .add-task-footer .add-task-details{
+.add-task .add-task-footer .add-task-details {
   display: flex;
   gap: 0.7rem;
 }
-.add-task .add-task-footer .add-task-details svg{
+.add-task .add-task-footer .add-task-details svg {
   font-size: 1.5em;
-  color: var(--clr-primary-4);
+  color: var(--clr-primary-7);
   cursor: pointer;
   transition: var(--transition);
 }
-.add-task .add-task-footer .add-task-details svg:hover{
+.add-task .add-task-footer .add-task-details svg:hover {
   color: var(--clr-black);
 }
 @media screen and (max-width: 1024px) {
-  .task-add-madal {
-    left: 17vw;
+  .task-add-modal {
+    left: 17.5vw;
+    width: 85%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -313,12 +314,11 @@ b {
     margin-left: 6%;
     padding: 1.2rem;
   }
-  .add-task .add-task-input form input{
-    /* width: 0vw; */
+  .add-task .add-task-input form input {
+    width: 100%;
   }
-  .add-task .add-task-input form button{
+  .add-task .add-task-input form button {
     /* width: 20%; */
-  padding: 0.65rem 0.3rem;
-    
+    padding: 0.65rem 0.3rem;
   }
 }
