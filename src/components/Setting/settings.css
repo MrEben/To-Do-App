@@ -1,0 +1,54 @@
+.settings {
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+  left: 80%;
+  padding: 2rem 1rem;
+  transition: var(--transition);
+  background: var(--clr-white);
+}
+.settings .settings-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr-black);
+  padding-bottom: 1rem;
+}
+.settings .choose-theme {
+    margin-top: 0.8rem;
+  border-bottom: 1px solid var(--clr-black);
+  padding-bottom: 1rem;
+}
+.settings .theme-colours{
+    margin-top: 0.8rem;
+    display: grid;
+    gap: 0.7rem;
+}
+.settings .theme-colours .colours {
+  display: flex;
+  gap: 0.5rem;
+}
+.settings .theme-colours .colours div {
+  width: 25px;
+  height: 25px;
+  background: var(--clr-black);
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+  .settings {
+    z-index: 997;
+    width: 40%;
+    left: 60%;
+    top: 4.5rem;
+    padding: 1.5rem 1.2rem;
+  }
+  .activeAside {
+    left: 0;
+  }
+  .settings .close {
+    display: block;
+  }
+}

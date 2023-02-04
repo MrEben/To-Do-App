@@ -35,6 +35,9 @@ const AddTask = () => {
               <button className="btn">Schedule</button>
             </form>
           </div>
+          {characterLimit - noteText.length <= 0 ? (
+            <h4 className="error-message">input text limit has been reached</h4>
+          ) : null}
           <div className="add-task-footer">
             <button onClick={handleSubmit} className="submit-task btn">
               add task

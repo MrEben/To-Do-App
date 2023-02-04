@@ -4,7 +4,7 @@ import SideBar from "./pages/Navbar/SideBar";
 import TopNav from "./pages/Navbar/TopNav";
 import { AppProvider } from "./components/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddTask from "./components/AddTask";
+import Settings from "./components/Setting/Settings";
 function App() {
   return (
     <AppProvider>
@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/add" element={<AddTask />} />
+              <Route path="/settings" element={<Settings />} />
             </Route>
           </Routes>
           <TopNav />

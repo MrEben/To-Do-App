@@ -32,7 +32,7 @@ const SideBar = () => {
           <AiOutlineDashboard />
           <h3>Dashboard</h3>
         </Link>
-        <Link to="/add">
+        <Link to="/settings">
           <AiOutlineProject />
           <h3>Progress</h3>
         </Link>

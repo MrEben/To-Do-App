@@ -274,6 +274,9 @@ b {
 .add-task .add-task-input form input:focus {
   border: 1px solid var(--clr-primary-9);
 }
+.task-add-modal .add-task .error-message{
+  color: var(--clr-primary-7);
+}
 .add-task .add-task-footer {
   display: flex;
   justify-content: space-between;

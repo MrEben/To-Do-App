@@ -16,7 +16,6 @@ const Today = () => {
           <IoMdAdd onClick={openModal} />
         </div>
         <div className="main-plan">
-          {/* <h2>Sustainable Development Goals and Health Innnovatiion</h2> */}
           {noteText ? (
             <h1>{noteText}</h1>
           ) : (
