@@ -12,7 +12,7 @@ import { useGlobalContext } from "../../components/context";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 const SideBar = () => {
-  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const { isSidebarOpen, closeSidebar, isSettingsOpen,setIsSettingsOpen } = useGlobalContext();
   const [displayDropDown, setDisplayDropDown] = useState(false);
   return (
     <aside className={isSidebarOpen ? "activeAside" : ""}>
@@ -57,7 +57,7 @@ const SideBar = () => {
             </li>
           </ul>
         </a>
-        <a href="#">
+        <a href="#" onClick={()=>setIsSettingsOpen(!isSettingsOpen)}>
           <AiOutlineSetting />
           <h3>Settings</h3>
         </a>

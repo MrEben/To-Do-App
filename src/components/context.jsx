@@ -4,6 +4,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [noteText, setNoteText] = useState("");
+  const [isSettingsOpen, setIsSettingsOpen] = useState(true);
   
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -28,7 +29,9 @@ const AppProvider = ({ children }) => {
         openModal,
         closeModal,
         noteText,
-        setNoteText
+        setNoteText,
+        isSettingsOpen,
+        setIsSettingsOpen
       }}
     >
       {children}

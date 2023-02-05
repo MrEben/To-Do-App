@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { GrClose, GrSchedule } from "react-icons/gr";
+
 import { BsAlarm } from "react-icons/bs";
-import { AiOutlineUnorderedList, AiOutlineTag } from "react-icons/ai";
+import { AiOutlineUnorderedList, AiOutlineTag,AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "./context";
 const AddTask = () => {
   const { closeModal, noteText, setNoteText } = useGlobalContext();
@@ -21,7 +22,7 @@ const AddTask = () => {
           <div className="add-task-head">
             <h2>Quick Add Task</h2>
             <div className="close-add-task" onClick={closeModal}>
-              <GrClose />
+              <AiOutlineClose />
             </div>
           </div>
           <div className="add-task-input">

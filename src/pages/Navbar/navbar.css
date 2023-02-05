@@ -78,11 +78,14 @@ aside .sidebar a:nth-child(3) ul {
 .displayscheduled {
   display: flex;
 }
+
 aside .sidebar a:nth-child(3) ul li {
   font-size: 1.2em;
   align-items: center;
+  display: flex;
+  gap: 0.5rem;
 }
-aside .sidebar a:nth-child(3) ul li:hover{
+aside .sidebar a:nth-child(3) ul li:hover {
   text-decoration: underline;
 }
 aside .sidebar a:last-child {
