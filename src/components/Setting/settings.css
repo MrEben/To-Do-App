@@ -1,3 +1,7 @@
+
+.hide-settings {
+  display: none;
+}
 .settings {
   height: 100vh;
   position: fixed;
@@ -7,8 +11,11 @@
   transition: all 3s ease-in-out;
   background: var(--clr-white);
 }
-.hide-settings {
-  display: none;
+
+.settings::before {
+  width: 100%;
+  background: red;
+  left: 0;
 }
 .settings .settings-head {
   display: flex;
@@ -20,7 +27,7 @@
 .settings .settings-head .close-settings {
   cursor: pointer;
 }
-.settings .settings-head .close-settings svg{
+.settings .settings-head .close-settings svg {
   color: var(--clr-black);
 }
 .settings .choose-theme {

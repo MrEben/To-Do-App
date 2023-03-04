@@ -17,7 +17,7 @@ const Today = () => {
         </div>
         <div className="main-plan">
           {noteText ? (
-            <h1>{noteText}</h1>
+            <h1 style={{textTransform:'capitalize' }}>{noteText}</h1>
           ) : (
             <h2>What are you plannng to do today?</h2>
           )}

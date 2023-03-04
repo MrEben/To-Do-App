@@ -75,14 +75,13 @@
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  /* gap: 2rem; */
 }
 @media screen and (max-width: 1024px) {
 .monthly-goals,.today-container {
   padding: 2.8rem 1.5rem;
 }
 .dashboard-layout {
-  left: 17vw;
+  left: 20vw;
 }
 }
 @media screen and (max-width: 768px) {

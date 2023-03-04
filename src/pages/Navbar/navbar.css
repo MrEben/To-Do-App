@@ -143,7 +143,7 @@ aside .sidebar a:last-child svg {
 }
 @media screen and (max-width: 1024px) {
   aside {
-    width: 10rem;
+    width: 7rem;
   }
   .app-user {
     width: 7rem;

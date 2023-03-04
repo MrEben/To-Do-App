@@ -63,6 +63,32 @@
     #202528 111.58%
   );
 }
+.blue-theme-variables {
+  --clr-pink: rgb(240, 47, 79);
+  --linear-gradient-1: linear-gradient(
+    90.21deg,
+    rgb(247, 66, 66) -5.91%,
+    var(--clr-pink) 111.58%
+  );
+  --linear-gradient-2: linear-gradient(
+    90.21deg,
+    rgb(232, 213, 213) -5.91%,
+    var(--clr-yellow) 111.58%
+  );
+}
+.yellow-theme-variables {
+  --clr-pink: rgb(240, 234, 47);
+  --linear-gradient-1: linear-gradient(
+    90.21deg,
+    rgb(231, 243, 162) -5.91%,
+    var(--clr-pink) 111.58%
+  );
+  --linear-gradient-2: linear-gradient(
+    90.21deg,
+    rgb(246, 247, 207) -5.91%,
+    var(--clr-yellow) 111.58%
+  );
+}
 /*
 =============== 
 Global Styles
@@ -226,7 +252,8 @@ b {
   background: var(--clr-primary-7);
   color: var(--clr-white);
 }
-.task-add-modal {
+.task-add-modal,
+.settings-container {
   margin: auto;
   position: fixed;
   left: 15vw;
@@ -274,7 +301,7 @@ b {
 .add-task .add-task-input form input:focus {
   border: 1px solid var(--clr-primary-9);
 }
-.task-add-modal .add-task .error-message{
+.task-add-modal .add-task .error-message {
   color: var(--clr-primary-7);
 }
 .add-task .add-task-footer {
@@ -299,13 +326,15 @@ b {
   color: var(--clr-black);
 }
 @media screen and (max-width: 1024px) {
-  .task-add-modal {
+  .task-add-modal,
+  .settings-container {
     left: 17.5vw;
     width: 85%;
   }
 }
 @media screen and (max-width: 768px) {
-  .task-add-modal {
+  .task-add-modal,
+  .settings-container {
     width: 100%;
     left: 0;
     grid-template-columns: 1fr;

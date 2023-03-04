@@ -2,9 +2,14 @@ import { useState } from "react";
 import { GrClose, GrSchedule } from "react-icons/gr";
 
 import { BsAlarm } from "react-icons/bs";
-import { AiOutlineUnorderedList, AiOutlineTag,AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineUnorderedList,
+  AiOutlineTag,
+  AiOutlineClose,
+} from "react-icons/ai";
 import { useGlobalContext } from "./context";
 const AddTask = () => {
+  const [toggleSchedule, setToggleSchedule] = useState(false);
   const { closeModal, noteText, setNoteText } = useGlobalContext();
   const characterLimit = 30;
   const handleChange = (e) => {
@@ -33,7 +38,12 @@ const AddTask = () => {
                 type="text"
                 placeholder="Enter task..."
               />
-              <button className="btn">Schedule</button>
+              <button
+                className="btn"
+                onClick={() => setToggleSchedule(!toggleSchedule)}
+              >
+                Schedule
+              </button>
             </form>
           </div>
           {characterLimit - noteText.length <= 0 ? (
@@ -50,6 +60,11 @@ const AddTask = () => {
               <GrSchedule />
             </div>
           </div>
+        {toggleSchedule && (
+          <>
+            <div>sleep</div>
+          </>
+        )}
         </div>
       </div>
     </>
