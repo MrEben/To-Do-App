@@ -10,20 +10,13 @@ const Settings = () => {
     setSelectedOption(event.target.value);
     document.body.classList.toggle("dark-theme-variables");
   };
+
   const setTheme = (colour) => {
-    document.body.classList.toggle(`${colour}-theme-variables`);
-    if (colour === "pink") {
-      document.body.className = "";
-    }
+    document.body.classList = `${colour}-theme-variables`;
   };
   const setColor = (e) => {
-    // const currentColour = e.target.style.getPropertyValue("background");
-    // console.log(currentColour);
-    // setTheme(currentColour);
-    // Get the background color of the clicked element
     const currentColour = e.target.style.backgroundColor;
 
-    // Call the setTheme function with the selected color
     setTheme(currentColour);
   };
   return (

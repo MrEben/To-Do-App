@@ -7,7 +7,9 @@ import {
   AiOutlineProject,
   AiOutlineSchedule,
   AiOutlineDashboard,
+  AiFillEdit
 } from "react-icons/ai";
+import {links} from '../../data/navData'
 import { useGlobalContext } from "../../components/context";
 import { Link } from "react-router-dom";
 import "./navbar.css";
@@ -18,7 +20,7 @@ const SideBar = () => {
     <aside className={isSidebarOpen ? "activeAside" : ""}>
       <div className="top">
         <div className="logo">
-          <span>e</span>
+          <span><AiOutlineSetting /></span>
           <h2>
             Busy<span className="danger">Dev</span>
           </h2>
@@ -28,13 +30,18 @@ const SideBar = () => {
         </div>
       </div>
       <div className="sidebar">
+        {/* {
+          links.map((item) => {
+            return <div>sd</div>
+          })
+        } */}
         <Link to="/" className="activenav">
           <AiOutlineDashboard />
           <h3>Dashboard</h3>
         </Link>
-        <Link to="/settings">
-          <AiOutlineProject />
-          <h3>Progress</h3>
+        <Link to="/editor">
+          <AiFillEdit />
+          <h3>Editor</h3>
         </Link>
         <a href="#" onClick={() => setDisplayDropDown(!displayDropDown)}>
           <div>

@@ -106,7 +106,7 @@ aside .sidebar a:last-child svg {
   align-items: center;
   position: fixed;
   right: 0;
-  width: 8rem;
+  width: 6.8rem;
   height: 100vh;
 }
 .app-user .user-img img {
@@ -146,7 +146,7 @@ aside .sidebar a:last-child svg {
     width: 7rem;
   }
   .app-user {
-    width: 7rem;
+    width: 6rem;
   }
 }
 @media screen and (max-width: 768px) {

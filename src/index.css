@@ -10,7 +10,7 @@
   --clr-primary-9: #74a43c;
   --clr-white: #fff;
   --clr-black: #222;
-  --clr-pink: pink;
+  --clr-pink: rgb(240, 124, 143);
   --clr-transparent-black: rgb(0, 0, 0, 0.2);
   --clr-gray: rgba(84, 84, 84, 0.7);
   --clr-yellow: rgb(238, 238, 161);
@@ -64,16 +64,16 @@
   );
 }
 .blue-theme-variables {
-  --clr-pink: rgb(240, 47, 79);
+  --clr-pink: rgb(93, 126, 245);
   --linear-gradient-1: linear-gradient(
     90.21deg,
-    rgb(247, 66, 66) -5.91%,
+    rgb(199, 218, 244) -5.91%,
     var(--clr-pink) 111.58%
   );
   --linear-gradient-2: linear-gradient(
     90.21deg,
-    rgb(232, 213, 213) -5.91%,
-    var(--clr-yellow) 111.58%
+    rgb(200, 224, 249) -5.91%,
+    rgb(236, 242, 247) 111.58%
   );
 }
 .yellow-theme-variables {
@@ -87,6 +87,19 @@
     90.21deg,
     rgb(246, 247, 207) -5.91%,
     var(--clr-yellow) 111.58%
+  );
+}
+.red-theme-variables {
+  --clr-pink: rgb(249, 129, 129);
+  --linear-gradient-1: linear-gradient(
+    90.21deg,
+    rgb(249, 191, 190) -5.91%,
+    var(--clr-pink) 111.58%
+  );
+  --linear-gradient-2: linear-gradient(
+    90.21deg,
+    rgb(246, 221, 221) -5.91%,
+    rgb(252, 247, 247) 111.58%
   );
 }
 /*
@@ -249,7 +262,7 @@ b {
 }
 .progress-card svg {
   font-size: 2.7em;
-  background: var(--clr-primary-7);
+  background: var(--clr-pink);
   color: var(--clr-white);
 }
 .task-add-modal,

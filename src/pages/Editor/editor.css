@@ -1,0 +1,8 @@
+.editor-layout {
+    position: absolute;
+    left: 15vw;
+    width: 83%;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 1fr 1fr 100px;
+  }

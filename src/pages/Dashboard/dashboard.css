@@ -71,21 +71,26 @@
   text-decoration: underline;
 }
 
-.monthly-goals .outlook,.monthly-goals .outlook .progress{
+.monthly-goals .outlook,
+.monthly-goals .outlook .progress {
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
 }
+.monthly-goals .outlook .progress {
+  gap: 1rem;
+}
 @media screen and (max-width: 1024px) {
-.monthly-goals,.today-container {
-  padding: 2.8rem 1.5rem;
-}
-.dashboard-layout {
-  left: 20vw;
-}
+  .monthly-goals,
+  .today-container {
+    padding: 2.8rem 1.5rem;
+  }
+  .dashboard-layout {
+    left: 20vw;
+  }
 }
 @media screen and (max-width: 768px) {
-  .today-container{
+  .today-container {
     margin-top: 4rem;
   }
   .dashboard-layout {
