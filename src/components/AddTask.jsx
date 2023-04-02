@@ -6,6 +6,7 @@ import {
   AiOutlineUnorderedList,
   AiOutlineTag,
   AiOutlineClose,
+  AiFillCaretDown,
 } from "react-icons/ai";
 import { useGlobalContext } from "./context";
 const AddTask = () => {
@@ -60,15 +61,53 @@ const AddTask = () => {
               <GrSchedule />
             </div>
           </div>
-        {toggleSchedule && (
-          <>
-            <div>sleep</div>
-          </>
-        )}
+          {toggleSchedule && (
+            <>
+              <div>sleep</div>
+              <DateComponent />
+              <div>
+                Description
+                <div className="comp">Print Mock Test</div>
+              </div>
+              <div>
+                Tags <div className="comp">work</div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
   );
 };
 
+const DateComponent = () => {
+  return (
+    <>
+      <div className="date-component">
+        <div className="today">
+          Date{" "}
+          <div className="comp">
+            Today <AiFillCaretDown />
+          </div>
+        </div>
+        <div className="time">
+          Time{" "}
+          <div>
+            <div className="comp">14</div>:<div className="comp">00</div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const Description = () => {
+  return (
+    <>
+      <div>
+        Description
+        <div className="comp">Print Mock Test</div>
+      </div>
+    </>
+  );
+};
 export default AddTask;
