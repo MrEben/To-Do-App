@@ -28,20 +28,7 @@ const Monthly = () => {
             icon={<MdOutlineWatchLater />}
             reminder="reminder"
           />
-          {/* <TaskCard
-            category={`Harmony`}
-            time={'3d'}
-            task={'Protein characteristics during childbirth and pregnancy'}
-            icon={<MdOutlineWatchLater />}
-            reminder="Deadline is today"
-          />
-          <TaskCard
-            category={`Pharmaceutical`}
-            time={'7h'}
-            task={'Quick element dissolution testing'}
-            icon={<SiCheckmarx />}
-            reminder="Accepted"
-          /> */}
+        
         </div>
         <div className="outlook">
           <div className="outlook-heading">
@@ -57,14 +44,14 @@ const Monthly = () => {
               progress="92% progress"
             />
             <Progress
-              icon={<AiOutlineHome />}
-              topic="Virus"
-              progress="92% progress"
+              icon={<MdOutlineWatchLater />}
+              topic="Food"
+              progress="72% progress"
             />
             <Progress
-              icon={<AiOutlineHome />}
-              topic="Virus"
-              progress="92% progress"
+              icon={<SiCheckmarx />}
+              topic="Microbiology"
+              progress="100% progress"
             />
           </div>
         </div>

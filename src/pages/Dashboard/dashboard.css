@@ -71,11 +71,13 @@
   text-decoration: underline;
 }
 
-.monthly-goals .outlook,
-.monthly-goals .outlook .progress {
+.monthly-goals .outlook{
   margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
+}
+.monthly-goals .outlook .progress {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
 }
 .monthly-goals .outlook .progress {
   gap: 1rem;

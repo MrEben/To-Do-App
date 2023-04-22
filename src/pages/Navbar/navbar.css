@@ -68,6 +68,7 @@ aside .sidebar a:nth-child(3) ul {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  background: white;
 }
 .rotatecaret {
   rotate: 180deg;

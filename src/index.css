@@ -218,7 +218,7 @@ b {
   padding: 0.65rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  border: 1px solid var(--clr-primary-6);
+  border: 1px solid var(--clr-pink);
   transition: var(--transition);
   font-weight: 600;
   text-transform: capitalize;
@@ -227,7 +227,7 @@ b {
 }
 
 .btn:hover {
-  background: var(--clr-primary-5);
+  background: var(--clr-pink);
   color: var(--clr-white);
 }
 .card {
@@ -259,7 +259,7 @@ b {
   gap: 2rem;
   grid-template-columns: 50% 50%;
 }
-.date-component .time>div{
+.date-component .time > div {
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -284,6 +284,7 @@ b {
   font-size: 2.7em;
   background: var(--clr-pink);
   color: var(--clr-white);
+  border-radius: 0.5rem;
 }
 .task-add-modal,
 .settings-container {
@@ -326,13 +327,13 @@ b {
   border-radius: 0;
 }
 .add-task .add-task-input form input {
-  border: 1px solid var(--clr-primary-4);
+  border: 1px solid var(--clr-grey);
   padding: 0.45rem;
   width: 80%;
   font-size: 1.2em;
 }
 .add-task .add-task-input form input:focus {
-  border: 1px solid var(--clr-primary-9);
+  border: 1px solid var(--clr-primary-4);
 }
 .task-add-modal .add-task .error-message {
   color: var(--clr-primary-7);
@@ -343,7 +344,7 @@ b {
   align-items: center;
 }
 .add-task .add-task-footer button {
-  background: var(--clr-primary-5);
+  background: var(--clr-pink);
 }
 .add-task .add-task-footer .add-task-details {
   display: flex;
@@ -351,7 +352,7 @@ b {
 }
 .add-task .add-task-footer .add-task-details svg {
   font-size: 1.5em;
-  color: var(--clr-primary-7);
+  color: var(--clr-black);
   cursor: pointer;
   transition: var(--transition);
 }
