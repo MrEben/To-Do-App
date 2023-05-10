@@ -286,6 +286,11 @@ b {
   color: var(--clr-white);
   border-radius: 0.5rem;
 }
+/* *******  FIX  ************ */
+/* Make progress card look bigger on hover of screen */
+/* .progress-card:hover{
+  transform: scale(1.2em);
+} */
 .task-add-modal,
 .settings-container {
   margin: auto;

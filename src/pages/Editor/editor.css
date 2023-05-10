@@ -1,8 +1,9 @@
 .editor-layout {
     position: absolute;
+    top: 5rem;
     left: 15vw;
     width: 83%;
     display: grid;
     gap: 0.8rem;
-    grid-template-columns: 1fr 1fr 100px;
+    /* grid-template-columns: 1fr 1fr 100px; */
   }

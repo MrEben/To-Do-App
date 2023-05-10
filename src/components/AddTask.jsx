@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { GrClose, GrSchedule } from "react-icons/gr";
-
 import { BsAlarm } from "react-icons/bs";
 import {
   AiOutlineUnorderedList,
@@ -39,12 +38,13 @@ const AddTask = () => {
                 type="text"
                 placeholder="Enter task..."
               />
-              <button
+              {/* Would look at fixing this and making it a button */}
+              <a
                 className="btn"
                 onClick={() => setToggleSchedule(!toggleSchedule)}
               >
                 Schedule
-              </button>
+              </a>
             </form>
           </div>
           {characterLimit - noteText.length <= 0 ? (
@@ -65,10 +65,7 @@ const AddTask = () => {
             <>
               <div>sleep</div>
               <DateComponent />
-              <div>
-                Description
-                <div className="comp">Print Mock Test</div>
-              </div>
+              <Description />
               <div>
                 Tags <div className="comp">work</div>
               </div>
