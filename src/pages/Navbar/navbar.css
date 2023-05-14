@@ -4,6 +4,7 @@ aside {
   width: 10%;
   padding-top: 2rem;
   transition: var(--transition);
+  /* background: var(--clr-black); */
 }
 aside .top {
   display: flex;

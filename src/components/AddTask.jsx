@@ -39,12 +39,12 @@ const AddTask = () => {
                 placeholder="Enter task..."
               />
               {/* Would look at fixing this and making it a button */}
-              <a
+              <div
                 className="btn"
                 onClick={() => setToggleSchedule(!toggleSchedule)}
               >
                 Schedule
-              </a>
+              </div>
             </form>
           </div>
           {characterLimit - noteText.length <= 0 ? (

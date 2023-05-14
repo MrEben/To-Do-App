@@ -18,6 +18,10 @@ const TextEditor = () => {
   return (
     <div className="editor-layout">
       <Editor
+        // toolbar={{
+        //   inline: { inDropdown: true },
+        //   list: { inDropdown: true },
+        // }}
         editorState={editorState}
         toolbarClassName="toolbarClassName"
         wrapperClassName="wrapperClassName"

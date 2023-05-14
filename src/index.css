@@ -15,6 +15,7 @@
   --clr-gray: rgba(84, 84, 84, 0.7);
   --clr-yellow: rgb(238, 238, 161);
   --clr-primary-color: rgb(3, 23, 23);
+  /* --background: #fFF; */
   --background: #fbf5f5;
   --color-info-dark: #010f08;
   --color-info-light: rgba(66, 73, 136, 0.18);
@@ -244,6 +245,10 @@ b {
   margin-top: 1.2rem;
   padding: 1.3rem;
   border: 1px solid var(--clr-primary-3);
+  transition: var(--transition);
+}
+.task-card:hover{
+  transform: scale(1.023);
 }
 .task-card .category {
   color: var(--clr-primary-4);
@@ -289,7 +294,7 @@ b {
 /* *******  FIX  ************ */
 /* Make progress card look bigger on hover of screen */
 /* .progress-card:hover{
-  transform: scale(1.2em);
+  transform: scale(1.5);
 } */
 .task-add-modal,
 .settings-container {
@@ -328,13 +333,13 @@ b {
 .add-task .add-task-input form {
   display: flex;
 }
-.add-task .add-task-input form button {
+.add-task .add-task-input form div {
   border-radius: 0;
 }
 .add-task .add-task-input form input {
   border: 1px solid var(--clr-grey);
   padding: 0.45rem;
-  width: 80%;
+  width: 88%;
   font-size: 1.2em;
 }
 .add-task .add-task-input form input:focus {
